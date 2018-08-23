@@ -661,6 +661,9 @@ var DiscoverComponent = /** @class */ (function () {
         this.toastr = toastr;
     }
     DiscoverComponent.prototype.ngOnInit = function () {
+        this.loadData();
+    };
+    DiscoverComponent.prototype.loadData = function () {
         var _this = this;
         this.userService.loadAllUsers()
             .subscribe(function (users) {
@@ -677,7 +680,7 @@ var DiscoverComponent = /** @class */ (function () {
         this.userService.deleteUser(id)
             .subscribe(function () {
             _this.toastr.info("User deleted.");
-            //this.loadData()
+            _this.loadData();
         });
     };
     DiscoverComponent = __decorate([
@@ -988,9 +991,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_chirp_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/chirp.service */ "./src/app/services/chirp.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _models_submit_chirp_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/submit-chirp.model */ "./src/app/models/submit-chirp.model.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1006,17 +1008,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(authService, chirpService, userService, toastr) {
         this.authService = authService;
         this.chirpService = chirpService;
         this.userService = userService;
         this.toastr = toastr;
-        this.model = new _models_submit_chirp_model__WEBPACK_IMPORTED_MODULE_4__["SubmitChirpModel"]('');
         this.username = sessionStorage.getItem('username');
     }
     HomeComponent.prototype.ngOnInit = function () {
+        this.loadData();
+    };
+    HomeComponent.prototype.loadData = function () {
         var _this = this;
         var allFollowedChirps = [];
         var users = JSON.parse(sessionStorage.getItem('subscriptions'));
@@ -1046,11 +1049,12 @@ var HomeComponent = /** @class */ (function () {
             _this.followers = followersArr.length;
         });
     };
-    HomeComponent.prototype.submitChirp = function () {
+    HomeComponent.prototype.deleteChirp = function (id) {
         var _this = this;
-        this.chirpService.createChirp(this.model.text, this.username)
+        this.chirpService.deleteChirp(id)
             .subscribe(function () {
-            _this.toastr.info("Chirp published.");
+            _this.toastr.info("Chirp deleted.");
+            _this.loadData();
         });
     };
     HomeComponent.prototype.dateConvertor = function (dateIsoFormat) {
@@ -1085,10 +1089,10 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_6__["AuthService"],
+        __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"],
             _services_chirp_service__WEBPACK_IMPORTED_MODULE_1__["ChirpService"],
             _services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]])
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -1632,6 +1636,7 @@ var UserFeedComponent = /** @class */ (function () {
         this.chirpService.createChirp(this.model.text, this.username)
             .subscribe(function () {
             _this.toastr.info("Chirp published.");
+            _this.loadData();
         });
     };
     UserFeedComponent.prototype.deleteChirp = function (id) {
@@ -1639,7 +1644,7 @@ var UserFeedComponent = /** @class */ (function () {
         this.chirpService.deleteChirp(id)
             .subscribe(function () {
             _this.toastr.info("Chirp deleted.");
-            //this.loadData()
+            _this.loadData();
         });
     };
     UserFeedComponent.prototype.loadData = function () {
