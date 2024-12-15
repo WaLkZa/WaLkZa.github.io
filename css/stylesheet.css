@@ -1,0 +1,189 @@
+body {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+}
+
+.navbar {
+    background: #333333;
+}
+
+.navbar-brand {
+    color: #ffa500 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #f0f0f0 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffa500 !important;
+}
+
+.carousel-inner img {
+    filter: brightness(70%);
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.02);
+}
+
+.carousel-caption h5 {
+    color: #ffa500;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+.carousel-caption p {
+    color: #ffffff;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.card-book:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.card-title {
+    color: #ffa500;
+}
+
+.btn-primary {
+    background-color: #ffa500;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #cc8400;
+}
+
+h3.section-title, .login-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #ffa500;
+}
+
+footer {
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    color: #333333;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #cc8400;
+}
+
+.profile-container, .login-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    color: #ffa500;
+    margin-bottom: 20px;
+}
+
+.profile-container label {
+    color: #333333;
+    font-weight: bold;
+}
+
+.profile-container input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.profile-container button {
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.profile-container button:hover {
+    background-color: #cc8400;
+}
+
+.social-icon {
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: #f0f0f0;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.facebook-icon:hover {
+    background-color: #3b5998;
+    color: #ffffff;
+}
+
+.x-icon:hover {
+    background-color: #002f4d;
+    color: #ffffff;
+}
+
+.instagram-icon:hover {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+.linkedin-icon:hover {
+    background-color: #0a66c2;
+    color: #ffffff;
+}

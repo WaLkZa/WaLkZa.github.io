@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondHand - Профил</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <div class="bg-dark text-light py-2" style="border-bottom: 1px solid #3c3c3c;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="me-3">Език: <strong>Български</strong></span>
+                <span>Валута: <strong>BGN</strong></span>
+            </div>
+            <div>
+                <a href="#" class="text-light text-decoration-none me-3" onclick="return false;"><i
+                        class="fa-solid fa-cart-shopping me-2"></i>Количка</a>
+                <a href="login.html" class="text-light text-decoration-none">Вход</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <div style="max-width: 80px;">
+                <img class="img-fluid" src="https://ue-varna.bg/img/logo_bg.png"
+                    title="Икономически университет – Варна">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Начало</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Профил</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h3 class="section-title">Редактиране на профила</h3>
+        <div class="alert alert-info">
+            <p class="mb-4">Можете да редактирате вашето потребителско име, имейл, парола и биография, за да запазите профила си
+                актуален. Ако имате нужда от помощ, свържете се с нашата поддръжка на <a href="contact.html">страницата
+                    за контакти</a>.</p>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-auto text-center">
+                        <img src="https://placehold.co/150" alt="Profile Picture" class="img-fluid rounded-circle">
+                        <div><a href="#" class="btn btn-primary mt-2">Смени снимката</a></div>
+                    </div>
+                    <div class="col-md">
+                        <h4>Симеон Николов</h4>
+                        <span class="text-muted">@snikolov</span>
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="fullname" class="form-label fw-bold">Пълно име</label>
+                            <input type="text" class="form-control" id="fullname" value="Симеон Николов" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="username" class="form-label fw-bold">Потребителско име</label>
+                            <input type="text" class="form-control" id="username" value="snikolov" required
+                                minlength="3">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="email" class="form-label fw-bold">Имейл</label>
+                            <input type="email" class="form-control" id="email" value="121720@students.ue-varna.bg"
+                                required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="about" class="form-label fw-bold">За мен</label>
+                            <textarea class="form-control" id="about" rows="3"
+                                placeholder="Вашето био">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, culpa iure dolorum ipsum perferendis hic? Quidem illo aspernatur ratione praesentium cupiditate. Ab deserunt neque libero quas officiis tempora voluptas beatae.</textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="password" class="form-label fw-bold">Нова парола</label>
+                            <input type="password" class="form-control" id="password" placeholder="Въведете нова парола"
+                                required minlength="6">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="confirmPassword" class="form-label fw-bold">Потвърдете паролата</label>
+                            <input type="password" class="form-control" id="confirmPassword"
+                                placeholder="Потвърдете новата парола" required>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-regular fa-circle-check"></i> Запази промените
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 SecondHand. Всички права запазени.</p>
+        </div>
+        <div class="container text-center mb-3">
+            <a href="https://www.facebook.com/ue.varna" target="_blank"
+                class="text-light me-3 social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/UE_VARNA" target="_blank" class="text-light me-3 social-icon x-icon"><i
+                    class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/uevarna/" target="_blank"
+                class="text-light me-3 social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/school/university-of-economics---varna/" target="_blank"
+                class="text-light social-icon linkedin-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

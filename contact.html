@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SecondHand - Контакти</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+	<div class="bg-dark text-light py-2" style="border-bottom: 1px solid #3c3c3c;">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div>
+				<span class="me-3">Език: <strong>Български</strong></span>
+				<span>Валута: <strong>BGN</strong></span>
+			</div>
+			<div>
+				<a href="#" class="text-light text-decoration-none me-3" onclick="return false;"><i
+						class="fa-solid fa-cart-shopping me-2"></i>Количка</a>
+				<a href="login.html" class="text-light text-decoration-none">Вход</a>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+		<div class="container">
+			<div style="max-width: 80px;">
+				<img class="img-fluid" src="https://ue-varna.bg/img/logo_bg.png"
+					title="Икономически университет – Варна">
+			</div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active" href="index.html">Начало</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Контакти</a></li>
+					<li class="nav-item"><a class="nav-link" href="profile.html">Профил</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container my-5">
+		<h3 class="section-title">Свържете се с нас</h3>
+		<div class="alert alert-info">
+			<p class="mb-4">Можете да се свържете с нас чрез формуляра по-долу или да се обадите на нашия телефонен
+				номер: <strong>+359 123 456 789</strong>. Работим всеки ден от 9:00 до 18:00 часа.</p>
+			<p class="mb-4">Ако имате въпроси или нужда от съдействие, не се колебайте да ни пишете. Нашият екип е на
+				разположение, за да ви помогне възможно най-скоро.</p>
+		</div>
+		<div class="row d-flex align-items-stretch">
+			<div class="col-md-6 d-flex">
+				<div class="contact-form mb-3 w-100">
+					<form>
+						<div class="mb-3">
+							<label for="name" class="form-label">Име</label>
+							<input type="text" class="form-control" id="name" placeholder="Вашето име">
+						</div>
+						<div class="mb-3">
+							<label for="email" class="form-label">Имейл</label>
+							<input type="email" class="form-control" id="email" placeholder="Вашият имейл">
+						</div>
+						<div class="mb-3">
+							<label for="message" class="form-label">Съобщение</label>
+							<textarea class="form-control" id="message" rows="4"
+								placeholder="Вашето съобщение"></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Изпрати</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-md-6 d-flex flex-column">
+				<div class="mb-3 text-center">
+					<strong>Адрес:</strong> 9002 Варна бул. "Княз Борис I" № 77
+				</div>
+				<div class="ratio ratio-16x9 w-100">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2908.0204273387585!2d27.92102607533928!3d43.209060881044444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4540939dfa6d5%3A0x3d401ef3c09a59bf!2z0JjQutC-0L3QvtC80LjRh9C10YHQutC4INGD0L3QuNCy0LXRgNGB0LjRgtC10YIgLSDQktCw0YDQvdCw!5e0!3m2!1sbg!2sbg!4v1734182445594!5m2!1sbg!2sbg"
+						allowfullscreen loading="lazy"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="bg-dark text-light py-4">
+		<div class="container text-center">
+			<p>&copy; 2024 SecondHand. Всички права запазени.</p>
+		</div>
+		<div class="container text-center mb-3">
+			<a href="https://www.facebook.com/ue.varna" target="_blank"
+				class="text-light me-3 social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://x.com/UE_VARNA" target="_blank" class="text-light me-3 social-icon x-icon"><i
+					class="fab fa-x-twitter"></i></a>
+			<a href="https://www.instagram.com/uevarna/" target="_blank"
+				class="text-light me-3 social-icon instagram-icon"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/school/university-of-economics---varna/" target="_blank"
+				class="text-light social-icon linkedin-icon"><i class="fab fa-linkedin"></i></a>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
